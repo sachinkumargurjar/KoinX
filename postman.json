@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "48d47723-4d96-4054-88b9-542c47f1a5a1",
+		"name": "KoinX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/crypto/convert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/crypto/convert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crypto",
+						"convert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/crypto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/crypto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crypto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/crypto/companies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/crypto/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crypto",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
