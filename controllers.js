@@ -28,8 +28,13 @@ export const getConvertedPrice = async (req, res) => {
         url = `https://api.coingecko.com/api/v3/coins/${toCurrency}/history?date=${dte}?x_cg_demo_api_key=${process.env.API_KEY}`
         const data2 = await axios.get(url);
         const btcPrice2 = data2.data.market_data.current_price.aed;
-        const convertedPrice = btcPrice1/btcPrice2;
-        res.status(200).json(`Converted Price: ${convertedPrice} ${toCurrency}`);
+        if(btcPrice1===undefined || btcPrice2===undefined){
+            res.status(200).json("Not Available");
+        }
+        else{
+            const convertedPrice = btcPrice1/btcPrice2;
+            res.status(200).json(`Converted Price: ${convertedPrice} ${toCurrency}`);
+        }
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
